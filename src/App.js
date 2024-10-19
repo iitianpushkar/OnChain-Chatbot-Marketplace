@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+import React, { useState, createContext } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/navbar/Navbar';
+import ChatbotForm from './components/form/ChatbotForm';
+import About from './components/about/About';
+import Chatbots from './components/chatbots/Chatbots';
+import Purchases from './components/purchases/purchases';
+
+export const UserContext = createContext();
 
 function App() {
+  const [account, setAccount] = useState("");
+  const [contract, setContract] = useState(null);
+  const [ownedChatbots, setownedChatbots] = useState([]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={{ account, setAccount, contract, setContract, ownedChatbots, setownedChatbots }}>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<ChatbotForm />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/chatbots" element={<Chatbots />} />
+          <Route path="/purchases" element={<Purchases />} />
+        </Routes>
+      </Router>
+    </UserContext.Provider>
   );
 }
 

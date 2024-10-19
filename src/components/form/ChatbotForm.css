@@ -1,0 +1,107 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chatbot-form {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.carousel-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around; /* Add more spacing between form and upload boxes */
+  align-items: flex-start;
+  margin-top: 20px;
+  gap: 40px; /* Increase the gap between the form and the upload sections */
+}
+
+.upload-box {
+  background-color: #262626;
+  border-radius: 12px;
+  padding: 20px;
+  width: 20%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+  background-color: #262626;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 400px;
+  width: 50%;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+label {
+  color: #cccccc;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+input {
+  padding: 10px;
+  background: #333333;
+  border: 1px solid #444444;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+input::placeholder {
+  color: #888888;
+}
+
+.register-button {
+  background-color: #00c853;
+  color: white;
+  padding: 10px 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s ease;
+}
+
+.register-button:hover {
+  background-color: #00a045;
+}
+
+.upload-section p {
+  color: #cccccc;
+}
+
+.upload-section input {
+  padding: 5px;
+  background: #333333;
+  border: 1px solid #444444;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+}
