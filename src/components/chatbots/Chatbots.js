@@ -58,7 +58,7 @@ function Chatbots() {
     }
     return (
         <div className="chatbot-container"> {/* Use custom class for background */}
-    <div className="content" style={{ marginTop: '50px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}> {/* Adjust marginTop to avoid overlap with fixed navbar */}
+    <div className="content" style={{ marginTop: '500px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}> {/* Adjust marginTop to avoid overlap with fixed navbar */}
         <h1 className="text-center mb-5" style={{ width: '100%', textAlign: 'center' }}>Chatbot Market</h1>
         {contract && chatbots.length ? (
             chatbots.map((chatbot, index) => (

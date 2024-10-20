@@ -105,7 +105,7 @@ function Purchases() {
     return (
         <div>
             <div className="chatbot-container">
-                <div className="content" style={{ marginTop: '95px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+                <div className="content" style={{ marginTop: '600px', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between' }}>
                     <h1 className="text-center mb-5" style={{ width: '100%', textAlign: 'center' }}>Your Purchases</h1>
                     {contract && ownedChatbots.length ? (
                         ownedChatbots.map((chatbot, index) => (
